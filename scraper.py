@@ -16,6 +16,7 @@ while url:
             "author": quote.find(class_="author").get_text(),
             "bio-link": quote.find("a")["href"].get_text()
         })
-
+    next_btn = soup.find(class_="next")
+    url = next_btn.find("a")["href"] if next_btn else None
 
 
